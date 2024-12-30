@@ -28,7 +28,7 @@ let playGame = () => {
 
     // Playing a round
     let playRound = (playRoundHuman, playRoundComputer) => {
-      const outcome = `${humanSelection}-${computerSelection}`
+      const outcome = `${playRoundHuman}-${playRoundComputer}`
       switch (outcome) {
         case "rock-scissors":
           ++humanScore
