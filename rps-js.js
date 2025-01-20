@@ -80,6 +80,28 @@ selection.addEventListener("click", function handleClick(e) {
 
       finalResult.textContent += `Final Result: ${finalMessage}`;
       selection.removeEventListener("click", handleClick);
+
+      const replayButton = document.createElement("button");
+      replayButton.textContent = "Play Again?";
+      replayButton.id = "replayButton";
+      document.body.appendChild(replayButton);
+
+      replayButton.addEventListener("click", () => {
+        computerScore = 0;
+        humanScore = 0;
+        round = 0;
+
+        human.textContent = ""
+        computer.textContent = ""
+        result.textContent = ""
+        humanScoreKeeper.textContent = ""
+        computerScoreKeeper.textContent = ""
+        finalResult.textContent = ""
+
+        replayButton.remove();
+        selection.addEventListener("click", handleClick);
+      })
+
     }
   }
 }
